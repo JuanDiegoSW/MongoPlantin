@@ -1,14 +1,13 @@
 
 const { Schema, model } = require('mongoose');
 
-const ProductoSchema = Schema({
+const PlantaSchema = Schema({
     rfc: {
         type: String,
     },
     nombre: {
         type: String,
     },
-
     informacion : {
         type: String
     },
@@ -16,4 +15,4 @@ const ProductoSchema = Schema({
         type: String,
     }
 });
-module.exports = model( 'Plantas', ProductoSchema );
+module.exports = model( 'plantas', PlantaSchema );

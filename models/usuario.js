@@ -1,10 +1,7 @@
 
-const { Schema, model } = require('mongoose');
+const { Schema, model, Mongoose } = require('mongoose');
 
 const UsuarioSchema = Schema({
-    rfc: {
-        type: String,
-    },
     nombres: {
         type: String,
     },
@@ -16,8 +13,18 @@ const UsuarioSchema = Schema({
     },
     correo: {
         type: String
-    }
-});
+    },
+    password: {
+        type: String
+    },
+    plantas:[{
+         rfc: String,
+         nombre: String,
+         informacion:String,
+         img:String
+        }
+    ]}
+    );
 
 
 
@@ -27,4 +34,4 @@ const UsuarioSchema = Schema({
 }*/
 
 //exporta el modelo y crea la coleccion dentro de nuestra bd
-module.exports = model( 'Usuarios', UsuarioSchema );
+module.exports = model( 'usuarios', UsuarioSchema );

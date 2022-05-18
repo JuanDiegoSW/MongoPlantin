@@ -51,10 +51,9 @@ middlewares(){
 //routes
 routes() {
     this.app.use( require('../routes/usuarios'));
-    //this.app.use( require('../routes/categorias'));
-    this.app.use( require('../routes/productos'));
+    this.app.use( require('../routes/tiendas'));
+    this.app.use( require('../routes/plantas'));    
     this.app.use( require('../routes/login'));
-    
 }
 
 listen(){

@@ -1,4 +1,4 @@
-const Role = require('../models/role');
+//const Role = require('../models/role');
 const Usuario = require('../models/usuario');
 
 const esRoleValido = async(rol = '') => {
@@ -30,7 +30,7 @@ const existeUsuarioPorId = async( id ) => {
 
 
 module.exports = {
-    esRoleValido,
+    //esRoleValido,
     emailExiste,
     existeUsuarioPorId
 }

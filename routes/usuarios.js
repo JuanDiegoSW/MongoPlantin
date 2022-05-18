@@ -8,12 +8,12 @@ const { esRoleValido, emailExiste, existeUsuarioPorId } = require('../helpers/db
 const router = Router();
 
 const {usuariosGet,
-    usuariosPost,
-    usuariosCreate,
-    editUsuario,
-    usuariosPut,
-    usuariosPatch,
-    usuariosDelete,} = require('../controller/usuarios')
+    AddPlantGarden,
+    GetPlantsGarden,
+    DeletePlantGarden} = require('../controller/usuarios')
 
 router.get('/usuarios',usuariosGet);
+router.get('/usuarios/:email', GetPlantsGarden)
+router.put('/usuarios/:email',AddPlantGarden)
+router.delete('/usuarios/:id/:idplant',DeletePlantGarden)
 module.exports = router;
